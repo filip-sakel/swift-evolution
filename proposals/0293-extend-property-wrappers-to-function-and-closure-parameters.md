@@ -1,11 +1,10 @@
 # Extend Property Wrappers to Function and Closure Parameters
 
-* Proposal: [SE-NNNN](NNNN-extend-property-wrappers-to-function-and-closure-parameters.md)
+* Proposal: [SE-0293](0293-extend-property-wrappers-to-function-and-closure-parameters.md)
 * Authors: [Holly Borla](https://github.com/hborla), [Filip Sakel](https://github.com/filip-sakel)
-* Review Manager: TBD
-* Status: **Awaiting implementation**
+* Review Manager: [Chris Lattner](https://github.com/lattner)
+* Status: **Active Review (December 1, 2020 ... December 13, 2020)**
 * Implementation: [apple/swift#34272](https://github.com/apple/swift/pull/34272)
-
 
 ## Introduction
 
@@ -318,7 +317,7 @@ let useReference = { (_reference: Reference<Lowercased>) in
     }
   }
 
-  var $reference: Int {
+  var $reference: Reference<Lowercased> {
     get { 
       _reference.projectedValue
     }
